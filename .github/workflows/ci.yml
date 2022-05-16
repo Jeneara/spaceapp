@@ -16,6 +16,8 @@ jobs:
     - uses: actions/setup-node@v2
       with:
         node-version: '14'
+    - name: Install
+      run: npm ci
     - name: Run Lint
       run: npm run lint
     - name: Run Tests
