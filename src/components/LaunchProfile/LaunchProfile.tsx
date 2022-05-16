@@ -1,16 +1,16 @@
-import * as React from 'react';
-import { LaunchProfileQuery } from '../../generated/graphql';
-import './style.css';
+import * as React from 'react'
+import { LaunchProfileQuery } from '../../generated/graphql'
+import './style.css'
 
 interface Props {
-  data: LaunchProfileQuery;
+  data: LaunchProfileQuery
 }
 
-const className = 'LaunchProfile';
+const className = 'LaunchProfile'
 
 const LaunchProfile: React.FC<Props> = ({ data }) => {
   if (!data.launch) {
-    return <div>No launch available</div>;
+    return <div>No launch available</div>
   }
 
   return (
@@ -44,7 +44,7 @@ const LaunchProfile: React.FC<Props> = ({ data }) => {
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default LaunchProfile;
+export default LaunchProfile

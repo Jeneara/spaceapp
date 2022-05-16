@@ -1,4 +1,4 @@
-import { gql } from '@apollo/client';
+import { gql } from '@apollo/client'
 
 export const QUERY_LAUNCH_PROFILE = gql`
   query LaunchProfile($id: String!) {
@@ -20,4 +20,4 @@ export const QUERY_LAUNCH_PROFILE = gql`
       }
     }
   }
-`;
+`
