@@ -12,7 +12,12 @@
     "@types/node": "^16.11.35",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^2.7.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.0.0",
     "graphql": "^16.5.0",
+    "prettier": "^2.6.2",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-scripts": "5.0.1",
@@ -23,7 +28,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "echo testing...",
-    "lint": "echo linting...",
+    "lint": "eslint \"src/**/*.{js,jsx,ts,tsx,json}\"",
+    "lint:fix": "eslint \"src/**/*.{js,jsx,ts,tsx,json}\" --fix",
+    "prettier": "prettier --list-different \"src/**/*.{js,jsx,ts,tsx,json}\"",
+    "prettier:fix": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json}\"",
+    "format": "npm run lint:fix && npm run prettier:fix",
     "eject": "react-scripts eject",
     "codegen": "graphql-codegen --config codegen.yml"
   },
@@ -50,7 +59,11 @@
     "@graphql-codegen/typescript": "2.4.11",
     "@graphql-codegen/typescript-operations": "2.4.0",
     "@graphql-codegen/typescript-react-apollo": "3.2.14",
+    "@typescript-eslint/eslint-plugin": "^5.23.0",
+    "@typescript-eslint/parser": "^5.23.0",
     "css-loader": "^6.7.1",
+    "eslint": "^8.15.0",
+    "eslint-plugin-react": "^7.29.4",
     "style-loader": "^3.3.1"
   }
 }
