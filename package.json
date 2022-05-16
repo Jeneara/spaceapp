@@ -15,7 +15,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "echo testing...",
+    "test": "jest",
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx,json}\"",
     "lint:fix": "eslint \"src/**/*.{js,jsx,ts,tsx,json}\" --fix",
     "prettier": "prettier --list-different \"src/**/*.{js,jsx,ts,tsx,json}\"",
