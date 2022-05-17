@@ -12,6 +12,7 @@ const App = () => {
 
   return (
     <div className='App'>
+      <h1>SpaceApp</h1>
       <LaunchList handleIdChange={handleIdChange} />
       <LaunchProfile id={id} />
     </div>
