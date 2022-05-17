@@ -1,20 +1,32 @@
 import * as React from 'react'
-import LaunchList from './components/LaunchList/Index'
-import LaunchProfile from './components/LaunchProfile'
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import Home from './components/home'
+import Launches from './components/launches'
 
 import './App.css'
 
-const App = () => {
-  const [id, setId] = React.useState(42)
-  const handleIdChange = React.useCallback((newId: React.SetStateAction<number>) => {
-    setId(newId)
-  }, [])
-
+function App() {
   return (
-    <div className='App'>
-      <h1>SpaceApp</h1>
-      <LaunchList handleIdChange={handleIdChange} />
-      <LaunchProfile id={id} />
+    <div>
+      <Router>
+        <div>
+          <nav>
+            <ul>
+              <li>
+                <Link to='/'>Home</Link>
+              </li>
+              <li>
+                <Link to='/launches'>Launches</Link>
+              </li>
+            </ul>
+          </nav>
+
+          <Switch>
+            <Route path='/launches' component={Launches} />
+            <Route path='/' component={Home} />
+          </Switch>
+        </div>
+      </Router>
     </div>
   )
 }
