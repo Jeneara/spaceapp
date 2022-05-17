@@ -7,29 +7,27 @@ import './App.css'
 
 function App() {
   return (
-    <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to='/'>Home</Link>
-            </li>
-            <li>
-              <Link to='/launches'>Launches</Link>
-            </li>
-          </ul>
-        </nav>
+    <div>
+      <Router>
+        <div>
+          <nav>
+            <ul>
+              <li>
+                <Link to='/'>Home</Link>
+              </li>
+              <li>
+                <Link to='/launches'>Launches</Link>
+              </li>
+            </ul>
+          </nav>
 
-        <Switch>
-          <Route path='/launches'>
-            <Launches />
-          </Route>
-          <Route path='/'>
-            <Home />
-          </Route>
-        </Switch>
-      </div>
-    </Router>
+          <Switch>
+            <Route path='/launches' component={Launches}/>
+            <Route path='/' component={Home} />
+          </Switch>
+        </div>
+      </Router>
+    </div>
   )
 }
 
