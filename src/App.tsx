@@ -22,7 +22,7 @@ function App() {
           </nav>
 
           <Switch>
-            <Route path='/launches' component={Launches}/>
+            <Route path='/launches' component={Launches} />
             <Route path='/' component={Home} />
           </Switch>
         </div>
