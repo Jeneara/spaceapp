@@ -1,16 +1,11 @@
 import * as React from 'react'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
-import LaunchList from './components/LaunchList/Index'
-import LaunchProfile from './components/LaunchProfile'
+import Home from './components/home'
+import Launches from './components/launches'
 
 import './App.css'
 
-const App = () => {
-  const [id, setId] = React.useState(42)
-  const handleIdChange = React.useCallback((newId: React.SetStateAction<number>) => {
-    setId(newId)
-  }, [])
-
+function App() {
   return (
     <Router>
       <div>
@@ -27,13 +22,10 @@ const App = () => {
 
         <Switch>
           <Route path='/launches'>
-            <div className='App'>
-              <LaunchList handleIdChange={handleIdChange} />
-              <LaunchProfile id={id} />
-            </div>
+            <Launches />
           </Route>
           <Route path='/'>
-            <h1>SpaceApp</h1>
+            <Home />
           </Route>
         </Switch>
       </div>
