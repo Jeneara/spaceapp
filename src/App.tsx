@@ -1,9 +1,15 @@
-import * as React from 'react'
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
-import Home from './components/home'
-import Launches from './components/launches'
+import * as React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Home from './components/home';
+import Launches from './components/launches';
+import { StyledLink } from './components/StyledLink';
 
-import './App.css'
+import './App.css';
+
+// import Button from './components/Button/Button';
+
+
+
 
 function App() {
   return (
@@ -11,14 +17,8 @@ function App() {
       <Router>
         <div>
           <nav>
-            <ul>
-              <li>
-                <Link to='/'>Home</Link>
-              </li>
-              <li>
-                <Link to='/launches'>Launches</Link>
-              </li>
-            </ul>
+            <StyledLink to='/'>Home</StyledLink>
+            <StyledLink  to='/launches'>Launches</StyledLink>
           </nav>
 
           <Switch>
