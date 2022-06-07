@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { useLaunchProfileQuery } from '../../generated/graphql'
+import { useLaunchProfileQuery } from '../../../generated/graphql'
 import LaunchProfile from './LaunchProfile'
 
 interface OwnProps {

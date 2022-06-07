@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { LaunchListQuery } from '../../generated/graphql'
+import { LaunchListQuery } from '../../../generated/graphql'
 import './style.css'
 
 export interface OwnProps {

@@ -1,31 +1,34 @@
-import * as React from 'react'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Home from './components/home'
-import Launches from './components/launches'
-import { StyledLink } from './components/StyledLink'
+import * as React from 'react';
+import { BrowserRouter, Switch, Route} from 'react-router-dom';
+import { createGlobalStyle } from 'styled-components';
+import Home from './components/Pages/home';
+import Launches from './components/Pages/launches';
+import { Button } from './components/common/Button';
 
-import './App.css'
 
-// import Button from './components/Button/Button';
+const GlobalStyle = createGlobalStyle`
+  body{
+    background: #fff;
+    min-height: 100vh;
+    margin: 0;
+    color: #000;
+    font-family: 'Kaushan Script';
+  }
+`;
+
 
 function App() {
   return (
-    <div>
-      <Router>
-        <div>
-          <nav>
-            <StyledLink to='/'>Home</StyledLink>
-            <StyledLink to='/launches'>Launches</StyledLink>
-          </nav>
+    <>
+    <GlobalStyle />
+    <BrowserRouter>
+      <Switch>
+        <Route path='/Launches' component={Launches} />
+        <Route path='/' component={Home} />
+      </Switch>
+    </BrowserRouter>
+    </>
+  );
+};
 
-          <Switch>
-            <Route path='/launches' component={Launches} />
-            <Route path='/' component={Home} />
-          </Switch>
-        </div>
-      </Router>
-    </div>
-  )
-}
-
-export default App
+export default App;

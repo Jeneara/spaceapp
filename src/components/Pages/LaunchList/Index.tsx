@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { useLaunchListQuery } from '../../generated/graphql'
+import { useLaunchListQuery } from '../../../generated/graphql'
 import LaunchList, { OwnProps } from './LaunchList'
 
 const LaunchListContainer: React.FC<OwnProps> = (props) => {
