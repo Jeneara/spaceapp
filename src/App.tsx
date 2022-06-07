@@ -5,7 +5,6 @@ import Home from './components/Pages/home';
 import Launches from './components/Pages/launches';
 
 
-
 const GlobalStyle = createGlobalStyle`
   body{
     background: #fff;
